@@ -66,10 +66,6 @@ This project was developed during a summer internship at ETH Zurich's Computatio
 
 For more information and to explore the dataset, visit [RedditTopics.xyz](https://redditopics.xyz/)
 
-## License
-
-[Add your chosen license here]
-
 ## Contact
 
-[Add your contact information here]
+viel.stefano01 [at] gmail.com

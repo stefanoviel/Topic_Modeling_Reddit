@@ -1,16 +1,75 @@
-# RedditPolarization
+# Reddit Topics Dataset
 
-module load stack/2024-05  gcc/13.2.0 python/3.11.6_cuda
+A comprehensive dataset of categorized Reddit posts using advanced topic modeling techniques. Visit [RedditTopics.xyz](https://redditopics.xyz/) for the live project.
 
-postgresql/13.2 ??
+## Overview
 
-To install cuml please refer to https://docs.rapids.ai/install
+This project processes and categorizes Reddit posts from the Pushshift dataset using BERTopic, transforming 1.7 billion unstructured posts into 43 million categorized entries. Instead of relying solely on subreddit categorization, this approach provides a more nuanced and cross-subreddit topic analysis.
 
-this needs to be done first: 
+## Methodology
 
-pip install \
-    --extra-index-url=https://pypi.nvidia.com \
-    cudf-cu12==24.6.* cuml-cu12==24.6.*
+### Data Processing Pipeline
 
-then: 
-pip install -r requirements.txt
+The project uses BERTopic for topic modeling with the following steps:
+
+1. **Text Embedding**: 
+   - Utilizes BERT to generate vector representations of posts
+   - Captures semantic meaning in high-dimensional space
+
+2. **Dimensionality Reduction**:
+   - Implements UMAP to reduce vectors to 5 dimensions
+   - Optimizes clustering efficiency
+
+3. **Clustering**:
+   - Applies HDBSCAN for density-based clustering
+   - Identifies topic clusters while filtering noise
+
+4. **Topic Identification**:
+   - Uses c-TF-IDF to extract important words per cluster
+   - Leverages ChatGPT for human-readable topic naming
+
+### Technical Challenges
+
+The project addressed several technical challenges:
+- Processing 1.7B posts efficiently
+- Managing memory constraints
+- Optimizing computational resources
+
+Solutions implemented:
+- GPU-accelerated processing for UMAP and HDBSCAN
+- Representative subset modeling strategy
+- Optimized memory management techniques
+
+## Features
+
+- Cross-subreddit topic analysis
+- Semantic-based categorization
+- Scalable processing pipeline
+- GPU-optimized implementations
+
+## Advantages Over Traditional Methods
+
+- Goes beyond simple subreddit categorization
+- Handles multi-topic content in large subreddits
+- Identifies topics spanning multiple subreddits
+- Provides more accurate content categorization
+
+## Project Implementation
+
+The final dataset represents a reduction from 1.7 billion to 43 million posts, ensuring quality and manageability while maintaining comprehensive coverage of Reddit content.
+
+## Acknowledgments
+
+This project was developed during a summer internship at ETH Zurich's Computational Social Science Lab under the supervision of Andrea Musso.
+
+## Website
+
+For more information and to explore the dataset, visit [RedditTopics.xyz](https://redditopics.xyz/)
+
+## License
+
+[Add your chosen license here]
+
+## Contact
+
+[Add your contact information here]

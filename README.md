@@ -1,6 +1,6 @@
 # Reddit Topics Dataset
 
-A comprehensive dataset of categorized Reddit posts using advanced topic modeling techniques. Visit [RedditTopics.xyz](https://redditopics.xyz/) for the live project.
+A comprehensive dataset of categorized Reddit posts using advanced topic modeling techniques.
 
 ## Overview
 
@@ -61,10 +61,6 @@ The final dataset represents a reduction from 1.7 billion to 43 million posts, e
 ## Acknowledgments
 
 This project was developed during a summer internship at ETH Zurich's Computational Social Science Lab under the supervision of Andrea Musso.
-
-## Website
-
-For more information and to explore the dataset, visit [RedditTopics.xyz](https://redditopics.xyz/)
 
 ## Contact
 
